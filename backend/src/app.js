@@ -24,6 +24,10 @@ app.use(cors({ origin: process.env.CORS_ORIGIN ?? "*" }));
 app.use(express.json({ limit: "4mb" }));
 app.use(express.static(publicDir));
 
+app.get("/", (_request, response) => {
+  response.sendFile(path.join(publicDir, "index.html"));
+});
+
 app.get("/health", (_request, response) => {
   response.json({ ok: true, service: "venary-ai-assistant" });
 });
