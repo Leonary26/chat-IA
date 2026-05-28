@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venary AI Assistant</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <div class="orb" aria-hidden="true"></div>
+        <p class="eyebrow">Assistant IA</p>
+        <h1>Venary</h1>
+        <p class="subtitle">Chat IA connecte au backend, avec reponse vocale sur navigateur compatible.</p>
+      </section>
+
+      <section class="chat-panel">
+        <div id="messages" class="messages">
+          <article class="message ai">Bonjour, je suis Venary. Ecris un message pour tester l'assistant.</article>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <button id="voiceButton" class="icon-button" type="button" title="Parler">🎙</button>
+          <input id="messageInput" autocomplete="off" placeholder="Demander a Venary..." />
+          <button class="send-button" type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

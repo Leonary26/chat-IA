@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Venary AI Assistant",
+    "slug": "venary-ai-assistant",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "venary",
+    "splash": {
+      "backgroundColor": "#05060A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.venary.aiassistant",
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_SMS",
+        "SEND_SMS",
+        "READ_PHONE_STATE",
+        "READ_CALL_LOG",
+        "POST_NOTIFICATIONS",
+        "BIND_NOTIFICATION_LISTENER_SERVICE"
+      ]
+    },
+    "plugins": [
+      "expo-av",
+      "expo-notifications",
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Autoriser Venary a utiliser le micro.",
+          "speechRecognitionPermission": "Autoriser Venary a transformer la voix en texte."
+        }
+      ]
+    ],
+    "extra": {
+      "apiBaseUrl": "http://10.0.2.2:4000"
+    }
+  }
+}
